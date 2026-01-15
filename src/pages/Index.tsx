@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/landing/AboutSection";
 import { ServicesSection } from "@/components/landing/ServicesSection";
 import { WhyChooseSection } from "@/components/landing/WhyChooseSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
+import { ROICalculator } from "@/components/landing/ROICalculator";
 import { PortfolioSection } from "@/components/landing/PortfolioSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { CTASection } from "@/components/landing/CTASection";
@@ -19,6 +20,7 @@ const Index = () => {
         <ServicesSection />
         <WhyChooseSection />
         <ProcessSection />
+        <ROICalculator />
         <PortfolioSection />
         <TestimonialsSection />
         <CTASection />
