@@ -53,7 +53,7 @@ export const CTASection = () => {
           </div>
 
           <Button variant="accent" size="lg" className="shadow-xl" asChild>
-            <a href="mailto:hello@tofunmicreative.com">
+            <a href="https://calendly.com/tjexcel07/30min" target="_blank" rel="noopener noreferrer">
               Book Your Free Audit
               <ArrowRight className="ml-2" />
             </a>
