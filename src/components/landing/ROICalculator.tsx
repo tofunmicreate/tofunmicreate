@@ -217,7 +217,7 @@ export const ROICalculator = () => {
               </div>
 
               <Button variant="accent" size="lg" className="w-full mt-6" asChild>
-                <a href="mailto:hello@tofunmicreative.com">
+                <a href="https://calendly.com/tjexcel07/30min" target="_blank" rel="noopener noreferrer">
                   Get Your Free Audit
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>

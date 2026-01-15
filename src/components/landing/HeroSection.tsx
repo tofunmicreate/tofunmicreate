@@ -58,7 +58,7 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="accent" size="lg" asChild>
-              <a href="#cta">
+              <a href="https://calendly.com/tjexcel07/30min" target="_blank" rel="noopener noreferrer">
                 Book a Free CRO Audit
                 <ArrowRight className="ml-2" />
               </a>
