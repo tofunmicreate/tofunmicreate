@@ -25,10 +25,10 @@ export const Footer = () => {
           <div className="flex items-center gap-2 text-muted-foreground">
             <Mail className="w-4 h-4" />
             <a 
-              href="mailto:hello@tofunmicreative.com" 
+              href="mailto:tofunmicreative@gmail.com" 
               className="text-sm hover:text-accent transition-colors"
             >
-              hello@tofunmicreative.com
+              tofunmicreative@gmail.com
             </a>
           </div>
 
