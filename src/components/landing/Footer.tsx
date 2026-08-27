@@ -1,9 +1,9 @@
 import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Twitter, href: "https://x.com/tofunmicreative", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/akinduro-tofunmi-tofunmi-996924402", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/tofunmi__creative?igsi=bGdlb3ZxMXl4b3Qz", label: "Instagram" },
 ];
 
 export const Footer = () => {
