@@ -25,7 +25,7 @@ const CookiePolicy = () => (
       </li>
       <li>
         <strong>Analytics cookies.</strong> If we enable an analytics tool, these cookies collect
-        anonymous statistics — which pages are visited, how long visitors stay, and roughly where
+        anonymous statistics, which pages are visited, how long visitors stay, and roughly where
         visitors are located. This helps us improve the site. We never use this data to identify
         you personally.
       </li>
@@ -44,7 +44,7 @@ const CookiePolicy = () => (
 
     <h2>Managing cookies</h2>
     <p>
-      You can control or delete cookies through your browser settings — every major browser
+      You can control or delete cookies through your browser settings, every major browser
       (Chrome, Safari, Firefox, Edge) lets you block or remove them. Blocking all cookies may
       affect how some websites work, though this site remains usable.
     </p>
@@ -57,7 +57,7 @@ const CookiePolicy = () => (
 
     <h2>Questions</h2>
     <p>
-      Email <a href="mailto:tofunmicreative@gmail.com">tofunmicreative@gmail.com</a> with any
+      Email <a href="mailto:info@tofunmicreative.site">info@tofunmicreative.site</a> with any
       questions about cookies on this site.
     </p>
   </PolicyLayout>

@@ -58,7 +58,7 @@ const TermsOfService = () => (
     <h2>Results disclaimer</h2>
     <p>
       We use proven, data-driven methods, but we can't guarantee specific revenue, conversion
-      rate, or ranking outcomes — no honest agency can. Any figures shown on this site are
+      rate, or ranking outcomes, no honest agency can. Any figures shown on this site are
       illustrative examples.
     </p>
 
@@ -78,7 +78,7 @@ const TermsOfService = () => (
 
     <h2>Questions</h2>
     <p>
-      Email <a href="mailto:tofunmicreative@gmail.com">tofunmicreative@gmail.com</a> with any
+      Email <a href="mailto:info@tofunmicreative.site">info@tofunmicreative.site</a> with any
       questions about these terms.
     </p>
   </PolicyLayout>

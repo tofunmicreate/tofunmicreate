@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Mail, Star } from "lucide-react";
 
 const socialLinks = [
   { icon: Twitter, href: "https://x.com/tofunmicreative", label: "Twitter" },
@@ -19,16 +19,25 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm mt-2">
               Shopify CRO Specialist
             </p>
+            <a
+              href="https://www.trustpilot.com/search?query=Tofunmi+Creative"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors mt-2"
+            >
+              <Star className="w-3.5 h-3.5 fill-accent text-accent" />
+              Listed on Trustpilot
+            </a>
           </div>
 
           {/* Contact */}
           <div className="flex items-center gap-2 text-muted-foreground">
             <Mail className="w-4 h-4" />
-            <a 
-              href="mailto:tofunmicreative@gmail.com" 
+            <a
+              href="mailto:info@tofunmicreative.site"
               className="text-sm hover:text-accent transition-colors"
             >
-              tofunmicreative@gmail.com
+              info@tofunmicreative.site
             </a>
           </div>
 
@@ -39,6 +48,8 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 <social.icon className="w-4 h-4" />
