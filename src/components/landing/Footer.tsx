@@ -47,6 +47,24 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Policy Links */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {[
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Terms of Service", href: "/terms-of-service" },
+            { label: "Refund & Cancellation Policy", href: "/refund-policy" },
+            { label: "Cookie Policy", href: "/cookie-policy" },
+          ].map((policy) => (
+            <a
+              key={policy.href}
+              href={policy.href}
+              className="text-sm text-muted-foreground hover:text-accent transition-colors"
+            >
+              {policy.label}
+            </a>
+          ))}
+        </div>
+
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Tofunmi Creative. All rights reserved.
