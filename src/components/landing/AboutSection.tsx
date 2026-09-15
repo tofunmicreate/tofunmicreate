@@ -22,13 +22,13 @@ export const AboutSection = () => {
               I Help Shopify Stores Turn Traffic Into Revenue
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Hi, I'm Tofunmi — a Shopify Conversion Rate Optimization specialist 
+              Hi, I'm Tofunmi, a Shopify Conversion Rate Optimization specialist 
               focused on helping ecommerce brands turn traffic into consistent revenue.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               I believe every store deserves to convert at its best. Too many Shopify 
               merchants waste ad spend on traffic that doesn't convert. My mission is 
-              to fix that — by combining data, design, and psychology to create stores 
+              to fix that, by combining data, design, and psychology to create stores 
               that sell.
             </p>
 

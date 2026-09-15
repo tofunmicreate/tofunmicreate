@@ -42,7 +42,7 @@ const RefundPolicy = () => (
       </li>
       <li>
         Paid months are generally non-refundable, since the work is already scheduled and
-        performed — but if we've failed to deliver the agreed scope in a month, we'll make it
+        performed, but if we've failed to deliver the agreed scope in a month, we'll make it
         right with additional work or a partial refund.
       </li>
     </ul>
@@ -63,7 +63,7 @@ const RefundPolicy = () => (
 
     <h2>How to cancel</h2>
     <p>
-      Email <a href="mailto:tofunmicreative@gmail.com">tofunmicreative@gmail.com</a> with your
+      Email <a href="mailto:info@tofunmicreative.site">info@tofunmicreative.site</a> with your
       name and project details. We'll confirm within 2 business days.
     </p>
   </PolicyLayout>

@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "What's the difference between CRO and just redesigning my store?",
-    answer: "A redesign focuses on aesthetics, while CRO focuses on revenue. We use data, psychology, and proven frameworks to make strategic changes that increase conversions—not just make things look pretty. Every change we make is backed by research and tested for performance."
+    answer: "A redesign focuses on aesthetics, while CRO focuses on revenue. We use data, psychology, and proven frameworks to make strategic changes that increase conversions, not just make things look pretty. Every change we make is backed by research and tested for performance."
   },
   {
     question: "Do I need a lot of traffic for CRO to work?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "What ROI can I expect from conversion optimization?",
-    answer: "Most stores we work with see a 20-50% increase in conversion rate. For a store doing $20k/month, even a 0.5% conversion rate improvement can mean an extra $3,000-5,000 in monthly revenue—without spending more on ads."
+    answer: "Most stores we work with see a 20-50% increase in conversion rate. For a store doing $20k/month, even a 0.5% conversion rate improvement can mean an extra $3,000-5,000 in monthly revenue, without spending more on ads."
   }
 ];
 
