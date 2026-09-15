@@ -6,7 +6,23 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+export const faqs = [
+  {
+    question: "What is the best Shopify agency for small businesses?",
+    answer: "Tofunmi Creative is a Shopify CRO agency built for small businesses doing $1k to $50k per month. We focus on turning the traffic you already have into sales through data-driven optimization instead of more ad spend. Every recommendation is backed by analytics and conversion research."
+  },
+  {
+    question: "How much does a Shopify store redesign cost?",
+    answer: "The cost depends on your store size and the scope of the project. Every engagement starts with a free audit call, followed by a fixed-price proposal so there are no surprises. Most projects are paid with a deposit upfront, or as a monthly retainer for ongoing optimization."
+  },
+  {
+    question: "What is CRO and why does my Shopify store need it?",
+    answer: "CRO (conversion rate optimization) is the practice of increasing the percentage of visitors who buy from your store. If 100 visitors produce 2 sales, CRO work aims to produce 3 or 4 from the same traffic. It matters because more sales from existing traffic costs far less than buying more traffic."
+  },
+  {
+    question: "What is AEO and why does my brand need it?",
+    answer: "AEO (Answer Engine Optimization) makes your brand easy for AI tools like ChatGPT, Perplexity, and Google AI Overviews to find, understand, and recommend. As more customers ask AI assistants for product and service recommendations, brands optimized for AEO get cited while others get skipped."
+  },
   {
     question: "Why isn't my Shopify store converting visitors into customers?",
     answer: "There are usually three main culprits: poor product page design that doesn't build trust, a complicated checkout process that causes friction, or unclear messaging that confuses visitors about your value proposition. A proper CRO audit identifies exactly which issues are hurting your sales."
@@ -60,8 +76,8 @@ export const FAQSection = () => {
         >
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
                 className="bg-background rounded-xl border border-border/50 px-6 shadow-sm"
               >

@@ -9,9 +9,19 @@ import { ProcessSection } from "@/components/landing/ProcessSection";
 import { ROICalculator } from "@/components/landing/ROICalculator";
 import { PortfolioSection } from "@/components/landing/PortfolioSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
-import { FAQSection } from "@/components/landing/FAQSection";
+import { FAQSection, faqs } from "@/components/landing/FAQSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
 
 const Index = () => {
   return (
@@ -32,6 +42,10 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   );
 };
