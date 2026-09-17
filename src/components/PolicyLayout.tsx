@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 interface PolicyLayoutProps {
   title: string;
@@ -10,9 +11,12 @@ interface PolicyLayoutProps {
 }
 
 export const PolicyLayout = ({ title, description, updated, children }: PolicyLayoutProps) => {
+  usePageMeta(`${title} | Tofunmi Creative`, description);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
 
   return (
     <div className="min-h-screen bg-background">
