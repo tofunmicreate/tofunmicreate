@@ -8,13 +8,13 @@ const steps = [
     icon: Search,
     number: "01",
     title: "Audit & Research",
-    description: "I deep-dive into your store analytics, user behavior, and competitor landscape to identify conversion opportunities.",
+    description: "We deep-dive into your store analytics, user behavior, and competitor landscape to identify conversion opportunities.",
   },
   {
     icon: Wrench,
     number: "02",
     title: "Optimize & Build",
-    description: "Based on findings, I implement data-driven changes to your store design, copy, and user experience.",
+    description: "Based on findings, we implement data-driven changes to your store design, copy, and user experience.",
   },
   {
     icon: Rocket,

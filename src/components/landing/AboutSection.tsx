@@ -19,17 +19,19 @@ export const AboutSection = () => {
           >
             <span className="text-accent font-medium text-sm uppercase tracking-wider">About</span>
             <h2 className="heading-section text-foreground mt-3 mb-6">
-              I Help Shopify Stores Turn Traffic Into Revenue
+              We Help Shopify Stores Turn Traffic Into Revenue
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Hi, I'm Tofunmi, a Shopify Conversion Rate Optimization specialist 
-              focused on helping ecommerce brands turn traffic into consistent revenue.
+              Tofunmi Creative is a Shopify conversion rate optimization agency that helps 
+              ecommerce brands turn existing traffic into consistent revenue through CRO, 
+              store design and development, landing pages, AI website building, answer engine 
+              optimization (AEO), and product launch marketing.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I believe every store deserves to convert at its best. Too many Shopify 
-              merchants waste ad spend on traffic that doesn't convert. My mission is 
-              to fix that, by combining data, design, and psychology to create stores 
-              that sell.
+              Founded and led by Tofunmi Akinduro, our team believes every store deserves to 
+              convert at its best. Too many Shopify merchants waste ad spend on traffic that 
+              doesn't convert. Our mission is to fix that, by combining data, design, and 
+              psychology to create stores that sell.
             </p>
 
             <div className="flex flex-wrap gap-6">
@@ -62,7 +64,7 @@ export const AboutSection = () => {
             className="relative"
           >
             <div className="card-elevated p-8 md:p-10">
-              <h3 className="heading-card text-foreground mb-8">Why Work With Me?</h3>
+              <h3 className="heading-card text-foreground mb-8">Why Work With Us?</h3>
               
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -81,7 +83,7 @@ export const AboutSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Conversion Psychology</h4>
-                    <p className="text-muted-foreground text-sm">I understand what makes people buy and apply that to every optimization.</p>
+                    <p className="text-muted-foreground text-sm">We understand what makes people buy and apply that to every optimization.</p>
                   </div>
                 </div>
 

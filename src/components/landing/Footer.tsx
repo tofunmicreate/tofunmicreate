@@ -17,8 +17,9 @@ export const Footer = () => {
               Tofunmi <span className="text-accent">Creative</span>
             </a>
             <p className="text-muted-foreground text-sm mt-2">
-              Shopify CRO Specialist
+              Shopify CRO &amp; Ecommerce Growth Agency
             </p>
+
             <a
               href="https://www.trustpilot.com/search?query=Tofunmi+Creative"
               target="_blank"

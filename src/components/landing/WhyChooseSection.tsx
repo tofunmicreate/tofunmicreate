@@ -22,7 +22,7 @@ const benefits = [
   },
   {
     title: "Focus on Revenue, Not Just Design",
-    description: "Beautiful stores are great, but stores that convert are better. I focus on both.",
+    description: "Beautiful stores are great, but stores that convert are better. We focus on both.",
   },
 ];
 
@@ -44,8 +44,8 @@ export const WhyChooseSection = () => {
               What Makes Tofunmi Creative Different
             </h2>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              I don't just make your store look pretty. I make it sell. Here's what 
-              sets my approach apart from typical web designers or agencies.
+              We don't just make your store look pretty. We make it sell. Here's what 
+              sets our approach apart from typical web design agencies.
             </p>
           </motion.div>
 

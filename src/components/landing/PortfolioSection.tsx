@@ -93,7 +93,7 @@ const projects = [
         { label: "Page Load Time", before: "6.2s", after: "1.8s", change: "-71%" },
         { label: "Add to Cart Rate", before: "4.2%", after: "11.8%", change: "+181%" }
       ],
-      testimonial: "I was ready to give up on paid ads. Tofunmi showed me the problem wasn't my product or my targeting, it was my landing page. Now I'm scaling profitably and actually enjoying running ads.",
+      testimonial: "I was ready to give up on paid ads. The Tofunmi Creative team showed me the problem wasn't my product or my targeting, it was my landing page. Now I'm scaling profitably and actually enjoying running ads.",
       testimonialAuthor: "Marcus Johnson, Founder"
     }
   },
@@ -119,7 +119,7 @@ export const PortfolioSection = () => {
             Real Results for Real Stores
           </h2>
           <p className="text-muted-foreground text-lg">
-            A selection of Shopify stores I've helped optimize for better conversions.
+            A selection of Shopify stores our team has optimized for better conversions.
           </p>
         </motion.div>
 
