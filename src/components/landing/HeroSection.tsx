@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
@@ -26,8 +26,9 @@ export const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse-soft" />
-              Shopify CRO Specialist
+              Shopify CRO &amp; Ecommerce Growth Agency
             </span>
+
           </motion.div>
 
           <motion.h1
@@ -70,6 +71,26 @@ export const HeroSection = () => {
               </a>
             </Button>
           </motion.div>
+
+          {/* Trustpilot Badge */}
+          <motion.a
+            href="https://www.trustpilot.com/search?query=Tofunmi+Creative"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card shadow-card text-sm text-muted-foreground hover:text-accent transition-colors"
+          >
+            <span className="flex items-center gap-0.5">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+              ))}
+            </span>
+            <span className="font-medium text-foreground">Reviewed on Trustpilot</span>
+            <span className="hidden sm:inline">as a Website Designer</span>
+          </motion.a>
+
 
           {/* Trust Indicators */}
           <motion.div
