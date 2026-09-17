@@ -16,7 +16,7 @@ export const PlatformIcons = () => {
     <section className="py-12 md:py-16 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 mb-8">
         <p className="text-center text-muted-foreground text-sm uppercase tracking-wider font-medium">
-          Tools & Platforms I Work With
+          Tools & Platforms We Work With
         </p>
       </div>
       

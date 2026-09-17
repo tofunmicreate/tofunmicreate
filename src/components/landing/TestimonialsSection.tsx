@@ -43,7 +43,7 @@ export const TestimonialsSection = () => {
             What Clients Say
           </h2>
           <p className="text-muted-foreground text-lg">
-            Don't just take my word for it. Here's what store owners have to say.
+            Don't just take our word for it. Here's what store owners have to say.
           </p>
         </motion.div>
 

@@ -47,7 +47,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto text-balance"
           >
-            I help Shopify brands increase conversions, improve UX, and grow revenue 
+            We help Shopify brands increase conversions, improve UX, and grow revenue 
             without wasting ad budget.
           </motion.p>
 
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             <Button variant="outline" size="lg" asChild>
               <a href="#portfolio">
                 <Play className="mr-2" size={18} />
-                View My Work
+                View Our Work
               </a>
             </Button>
           </motion.div>
