@@ -28,7 +28,7 @@ const PrivacyPolicy = () => (
       </li>
       <li>
         <strong>Cookies.</strong> See our{" "}
-        <a href="/cookie-policy">Cookie Policy</a> for details.
+        <Link to="/cookie-policy" className="text-accent underline">Cookie Policy</Link> for details.
       </li>
     </ul>
 
