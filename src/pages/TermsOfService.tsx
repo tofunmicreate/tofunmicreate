@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PolicyLayout } from "@/components/PolicyLayout";
 
 const TermsOfService = () => (
@@ -72,7 +73,7 @@ const TermsOfService = () => (
     <h2>Termination</h2>
     <p>
       Either side can end an engagement with written notice. See our{" "}
-      <a href="/refund-policy">Refund &amp; Cancellation Policy</a> for how payments and refunds
+      <Link to="/refund-policy" className="text-accent underline">Refund &amp; Cancellation Policy</Link> for how payments and refunds
       are handled when a project ends early.
     </p>
 
