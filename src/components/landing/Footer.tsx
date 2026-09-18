@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Instagram, Mail, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { icon: Twitter, href: "https://x.com/tofunmicreative", label: "Twitter" },
@@ -67,13 +68,13 @@ export const Footer = () => {
             { label: "Refund & Cancellation Policy", href: "/refund-policy" },
             { label: "Cookie Policy", href: "/cookie-policy" },
           ].map((policy) => (
-            <a
+            <Link
               key={policy.href}
-              href={policy.href}
+              to={policy.href}
               className="text-sm text-muted-foreground hover:text-accent transition-colors"
             >
               {policy.label}
-            </a>
+            </Link>
           ))}
         </div>
 
