@@ -22,7 +22,8 @@
 
 export interface CaseStudyResult {
   label: string;
-  before: string;
+  /** Optional: leave empty for outcomes that are not before/after numbers */
+  before?: string;
   after: string;
 }
 
