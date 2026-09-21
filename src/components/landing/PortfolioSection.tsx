@@ -48,13 +48,13 @@ export const PortfolioSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             {publishedCaseStudies.length > 0
-              ? "Shopify stores our team has optimized, with the numbers behind the work."
+              ? "Stores and products our team has optimized, with the numbers behind the work."
               : "Client stories are published here as soon as each store owner approves the numbers. In the meantime, here is exactly how we work."}
           </p>
         </motion.div>
 
         {publishedCaseStudies.length > 0 ? (
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {publishedCaseStudies.map((study, index) => (
               <motion.div
                 key={study.client}
@@ -178,10 +178,14 @@ export const PortfolioSection = () => {
                         .map((result) => (
                           <div key={result.label} className="bg-secondary rounded-lg p-3">
                             <p className="text-xs text-muted-foreground mb-1">{result.label}</p>
-                            <div className="flex items-baseline gap-2">
-                              <span className="text-muted-foreground text-sm line-through">{result.before}</span>
-                              <span className="text-foreground font-bold">{result.after}</span>
-                            </div>
+                            {result.before ? (
+                              <div className="flex items-baseline gap-2">
+                                <span className="text-muted-foreground text-sm line-through">{result.before}</span>
+                                <span className="text-foreground font-bold">{result.after}</span>
+                              </div>
+                            ) : (
+                              <span className="text-foreground font-bold text-sm leading-snug">{result.after}</span>
+                            )}
                           </div>
                         ))}
                     </div>
