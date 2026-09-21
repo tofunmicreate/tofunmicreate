@@ -131,6 +131,38 @@ export const caseStudies: CaseStudy[] = [
     testimonialAuthor: "Marcus T., Founder of FitGear Pro",
     color: "bg-emerald-500",
   },
+  {
+    // NOTE: client has not yet approved using their product name publicly.
+    // Once approved, replace the name below with "Monolog" and update any
+    // anonymized wording so it publishes under the real brand.
+    published: true,
+    client: "Independent Note-Taking App",
+    storeType: "Note-taking app for iOS & web",
+    headlineStat: "1 Critical Bug",
+    headlineLabel: "Caught in user testing",
+    summary:
+      "A solo founder built the entire app on his own and needed honest reactions from real users, not manufactured reviews. We coordinated real user testing across mobile and web and turned the feedback into a clear action plan.",
+    timeline: "",
+    challenge:
+      "The app was built entirely solo by its founder, who needed honest, real-world user feedback but didn't have the budget or team for a traditional marketing push. He wanted genuine reactions from real users, not manufactured reviews or generic marketing copy.",
+    solution: [
+      "Conducted an initial landing page review, identifying opportunities around messaging hierarchy, feature demonstration placement, and trust-building elements",
+      "Sourced and coordinated a small group of real users who matched the target audience (people already using tools like Notion, Obsidian, and journaling apps)",
+      "Collected honest, unscripted feedback from each user on their actual experience across both mobile and web",
+      "Identified a real product bug (a Google sign-in issue) directly from user testing, which the founder investigated right away",
+      "Surfaced a clear pattern from user feedback: a strong mobile experience, but friction on the web version, giving the founder a concrete area to prioritize",
+    ],
+    results: [
+      { label: "Real users tested", after: "Structured, unscripted feedback" },
+      { label: "Product bug uncovered", after: "Google sign-in issue" },
+      { label: "Mobile experience", after: "Validated as strong" },
+      { label: "Web friction", after: "Identified and prioritized" },
+    ],
+    testimonial:
+      "More valuable than generic exposure or a marketing push at that stage.",
+    testimonialAuthor: "Founder, independent note-taking app",
+    color: "bg-sky-500",
+  },
 ];
 
 export const publishedCaseStudies = caseStudies.filter(
