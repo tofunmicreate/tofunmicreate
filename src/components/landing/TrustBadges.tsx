@@ -17,7 +17,7 @@ const badges = [
   },
   {
     name: "Clutch",
-    href: "https://clutch.co/search?query=Tofunmi+Creative",
+    href: "https://vendor.clutch.co/",
     label: "Listed on",
     mark: (
       <svg viewBox="0 0 24 24" className="w-5 h-5" aria-hidden="true">
@@ -31,7 +31,7 @@ const badges = [
   },
   {
     name: "TechBehemoths",
-    href: "https://techbehemoths.com/search?query=Tofunmi+Creative",
+    href: "https://techbehemoths.com/company/tofunmi-creative",
     label: "Listed on",
     mark: (
       <svg viewBox="0 0 24 24" className="w-5 h-5" aria-hidden="true">
