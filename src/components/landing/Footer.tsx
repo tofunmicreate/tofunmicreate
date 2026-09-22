@@ -1,5 +1,6 @@
-import { Linkedin, Twitter, Instagram, Mail, Star } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { trustBadges } from "@/components/landing/TrustBadges";
 
 const socialLinks = [
   { icon: Twitter, href: "https://x.com/tofunmicreative", label: "Twitter" },
@@ -21,15 +22,21 @@ export const Footer = () => {
               Shopify CRO &amp; Ecommerce Growth Agency
             </p>
 
-            <a
-              href="https://www.trustpilot.com/search?query=Tofunmi+Creative"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors mt-2"
-            >
-              <Star className="w-3.5 h-3.5 fill-accent text-accent" />
-              Listed on Trustpilot
-            </a>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1.5 mt-3">
+              {trustBadges.map((badge) => (
+                <a
+                  key={badge.name}
+                  href={badge.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors"
+                  aria-label={`${badge.label} ${badge.name}`}
+                >
+                  {badge.mark}
+                  <span>{badge.name}</span>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Contact */}
