@@ -43,12 +43,10 @@ const readFileAsDataUrl = (file: File) =>
   });
 
 const CroAudit = () => {
-  usePageMeta({
-    title: "Free AI CRO Audit Tool | Tofunmi Creative",
-    description:
-      "Upload your Shopify page screenshots, describe your conversion goal, and get prioritized CRO recommendations in minutes.",
-    canonical: "https://tofunmicreate.lovable.app/cro-audit",
-  });
+  usePageMeta(
+    "Free AI CRO Audit Tool | Tofunmi Creative",
+    "Upload your Shopify page screenshots, describe your conversion goal, and get prioritized CRO recommendations in minutes.",
+  );
 
   const [images, setImages] = useState<{ name: string; dataUrl: string }[]>([]);
   const [goals, setGoals] = useState("");

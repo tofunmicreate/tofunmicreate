@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Process", href: "#process" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Testimonials", href: "#testimonials" },
+  { label: "Free AI Audit", href: "/cro-audit" },
 ];
 
 export const Header = () => {
