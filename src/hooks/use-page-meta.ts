@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SITE_URL = "https://tofunmicreate.lovable.app";
+const SITE_URL = "https://www.tofunmicreative.site";
 
 /**
  * Sets per-page title, meta description, and canonical URL.
