@@ -50,7 +50,27 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { goals, storeType, images } = await req.json();
+    const { goals, storeType, images, storeUrl } = await req.json();
+
+    let cleanUrl = "";
+    if (typeof storeUrl === "string" && storeUrl.trim()) {
+      try {
+        const raw = storeUrl.trim();
+        const parsed = new URL(/^https?:\/\//i.test(raw) ? raw : `https://${raw}`);
+        if (!parsed.hostname.includes(".") || raw.length > 300) throw new Error();
+        cleanUrl = parsed.href;
+      } catch {
+        return Response.json(
+          { error: "Please enter a valid store URL, like yourstore.com." },
+          { status: 400, headers: corsHeaders },
+        );
+      }
+    } else {
+      return Response.json(
+        { error: "Please enter your store URL." },
+        { status: 400, headers: corsHeaders },
+      );
+    }
 
     if (!Array.isArray(images) || images.length === 0) {
       return Response.json(
@@ -77,8 +97,10 @@ Deno.serve(async (req) => {
         text: [
           "You are a senior Shopify conversion rate optimization consultant at Tofunmi Creative.",
           "Review the attached page screenshots and return prioritized, specific CRO recommendations.",
-          storeType ? `Store type: ${storeType}` : "",
-          `Conversion goal from the store owner: ${goals.trim()}`,
+          `Store URL: ${cleanUrl}`,
+          storeType ? `Store type: ${String(storeType).slice(0, 100)}` : "",
+          `Conversion goal from the store owner: ${goals.trim().slice(0, 2000)}`,
+          "First identify the conversion barriers visible on the page (trust gaps, unclear value proposition, weak calls to action, pricing or shipping clarity, mobile friction, navigation and checkout friction). Each recommendation's 'problem' must name the specific barrier, and 'fix' must remove it.",
           "Rules: reference what you can actually see in the screenshots, be concrete (copy, layout, trust, offer, friction), and order recommendations with highest revenue impact first. Return between 5 and 8 recommendations. Use simple English and no em dashes.",
         ]
           .filter(Boolean)
