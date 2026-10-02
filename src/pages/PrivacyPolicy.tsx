@@ -9,7 +9,7 @@ const PrivacyPolicy = () => (
   >
     <p>
       Tofunmi Creative ("we", "us") respects your privacy. This policy explains, in plain
-      language, what information we collect when you visit tofunmicreate.lovable.app or contact
+      language, what information we collect when you visit www.tofunmicreative.site or contact
       us, and what we do with it.
     </p>
 
