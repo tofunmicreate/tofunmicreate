@@ -49,6 +49,7 @@ const CroAudit = () => {
   );
 
   const [images, setImages] = useState<{ name: string; dataUrl: string }[]>([]);
+  const [storeUrl, setStoreUrl] = useState("");
   const [goals, setGoals] = useState("");
   const [storeType, setStoreType] = useState("");
   const [loading, setLoading] = useState(false);
@@ -92,6 +93,10 @@ const CroAudit = () => {
       toast.error("Please upload at least one screenshot.");
       return;
     }
+    if (!storeUrl.trim()) {
+      toast.error("Please enter your Shopify store URL.");
+      return;
+    }
     if (goals.trim().length < 10) {
       toast.error("Tell us a little more about your conversion goal.");
       return;
@@ -102,6 +107,7 @@ const CroAudit = () => {
     try {
       const { data, error } = await supabase.functions.invoke("cro-audit", {
         body: {
+          storeUrl: storeUrl.trim(),
           goals,
           storeType,
           images: images.map((image) => image.dataUrl),
@@ -150,6 +156,21 @@ const CroAudit = () => {
             onSubmit={handleSubmit}
             className="rounded-2xl border border-border bg-card p-6 shadow-sm"
           >
+            <div className="mb-6 space-y-2">
+              <Label htmlFor="storeUrl">Shopify store URL</Label>
+              <Input
+                id="storeUrl"
+                type="text"
+                inputMode="url"
+                autoComplete="url"
+                value={storeUrl}
+                onChange={(event) => setStoreUrl(event.target.value)}
+                placeholder="yourstore.com or yourstore.myshopify.com"
+                maxLength={300}
+                required
+              />
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="screenshots">Page screenshots (up to {MAX_IMAGES})</Label>
               <label
