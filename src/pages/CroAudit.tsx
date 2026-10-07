@@ -45,10 +45,11 @@ const readFileAsDataUrl = (file: File) =>
 const CroAudit = () => {
   usePageMeta(
     "Free AI CRO Audit Tool | Tofunmi Creative",
-    "Upload your Shopify page screenshots, describe your conversion goal, and get prioritized CRO recommendations in minutes.",
+    "Enter your Shopify store URL, upload a page screenshot, describe your conversion goal, and get prioritized CRO recommendations.",
   );
 
   const [images, setImages] = useState<{ name: string; dataUrl: string }[]>([]);
+  const [storeUrl, setStoreUrl] = useState("");
   const [goals, setGoals] = useState("");
   const [storeType, setStoreType] = useState("");
   const [loading, setLoading] = useState(false);
@@ -92,8 +93,16 @@ const CroAudit = () => {
       toast.error("Please upload at least one screenshot.");
       return;
     }
+    if (!storeUrl.trim()) {
+      toast.error("Please enter your Shopify store URL.");
+      return;
+    }
     if (goals.trim().length < 10) {
       toast.error("Tell us a little more about your conversion goal.");
+      return;
+    }
+    if (storeUrl.trim().length > 300) {
+      toast.error("Please enter a shorter store URL.");
       return;
     }
 
@@ -102,6 +111,7 @@ const CroAudit = () => {
     try {
       const { data, error } = await supabase.functions.invoke("cro-audit", {
         body: {
+          storeUrl: storeUrl.trim(),
           goals,
           storeType,
           images: images.map((image) => image.dataUrl),
@@ -115,8 +125,20 @@ const CroAudit = () => {
       }
       setResult(data as AuditResult);
     } catch (error) {
-      console.error(error);
-      toast.error("We could not generate your audit. Please try again.");
+      const context =
+        typeof error === "object" && error !== null && "context" in error
+          ? error.context
+          : undefined;
+      let message = "We could not generate your audit. Please try again.";
+      if (context instanceof Response) {
+        try {
+          const responseBody = await context.clone().json();
+          if (typeof responseBody?.error === "string") message = responseBody.error;
+        } catch {
+          // Keep the friendly fallback when the function did not return JSON.
+        }
+      }
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -150,6 +172,21 @@ const CroAudit = () => {
             onSubmit={handleSubmit}
             className="rounded-2xl border border-border bg-card p-6 shadow-sm"
           >
+            <div className="mb-6 space-y-2">
+              <Label htmlFor="storeUrl">Shopify store URL</Label>
+              <Input
+                id="storeUrl"
+                type="text"
+                inputMode="url"
+                autoComplete="url"
+                value={storeUrl}
+                onChange={(event) => setStoreUrl(event.target.value)}
+                placeholder="yourstore.com or yourstore.myshopify.com"
+                maxLength={300}
+                required
+              />
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="screenshots">Page screenshots (up to {MAX_IMAGES})</Label>
               <label
@@ -165,7 +202,7 @@ const CroAudit = () => {
               <input
                 id="screenshots"
                 type="file"
-                accept="image/*"
+                accept="image/png,image/jpeg,image/webp"
                 multiple
                 className="sr-only"
                 onChange={(event) => {
