@@ -45,7 +45,7 @@ const readFileAsDataUrl = (file: File) =>
 const CroAudit = () => {
   usePageMeta(
     "Free AI CRO Audit Tool | Tofunmi Creative",
-    "Upload your Shopify page screenshots, describe your conversion goal, and get prioritized CRO recommendations in minutes.",
+    "Enter your Shopify store URL, upload a page screenshot, describe your conversion goal, and get prioritized CRO recommendations.",
   );
 
   const [images, setImages] = useState<{ name: string; dataUrl: string }[]>([]);
@@ -101,6 +101,10 @@ const CroAudit = () => {
       toast.error("Tell us a little more about your conversion goal.");
       return;
     }
+    if (storeUrl.trim().length > 300) {
+      toast.error("Please enter a shorter store URL.");
+      return;
+    }
 
     setLoading(true);
     setResult(null);
@@ -121,8 +125,20 @@ const CroAudit = () => {
       }
       setResult(data as AuditResult);
     } catch (error) {
-      console.error(error);
-      toast.error("We could not generate your audit. Please try again.");
+      const context =
+        typeof error === "object" && error !== null && "context" in error
+          ? error.context
+          : undefined;
+      let message = "We could not generate your audit. Please try again.";
+      if (context instanceof Response) {
+        try {
+          const responseBody = await context.clone().json();
+          if (typeof responseBody?.error === "string") message = responseBody.error;
+        } catch {
+          // Keep the friendly fallback when the function did not return JSON.
+        }
+      }
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -186,7 +202,7 @@ const CroAudit = () => {
               <input
                 id="screenshots"
                 type="file"
-                accept="image/*"
+                accept="image/png,image/jpeg,image/webp"
                 multiple
                 className="sr-only"
                 onChange={(event) => {
