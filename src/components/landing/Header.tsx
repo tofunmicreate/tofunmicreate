@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Q4Banner } from "@/components/landing/Q4Banner";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -17,6 +18,7 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <Q4Banner />
       <div className="container-custom section-padding !py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="font-display text-xl font-bold text-foreground">
