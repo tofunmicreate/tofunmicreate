@@ -4,7 +4,7 @@ import { Footer } from "@/components/landing/Footer";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { Compass, Search, TrendingUp, Rocket, CheckCircle } from "lucide-react";
 
-const CALENDLY = "https://calendly.com/tjexcel07/30min";
+const CALENDLY = "https://calendly.com/tofunmicreative-info/30min";
 
 const sections = [
   {

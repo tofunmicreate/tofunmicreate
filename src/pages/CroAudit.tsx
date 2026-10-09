@@ -297,7 +297,7 @@ const CroAudit = () => {
                 </ul>
                 <Button variant="accent-outline" className="mt-6" asChild>
                   <a
-                    href="https://calendly.com/tjexcel07/30min"
+                    href="https://calendly.com/tofunmicreative-info/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -364,7 +364,7 @@ const CroAudit = () => {
                   </p>
                   <Button variant="accent" className="mt-4" asChild>
                     <a
-                      href="https://calendly.com/tjexcel07/30min"
+                      href="https://calendly.com/tofunmicreative-info/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
