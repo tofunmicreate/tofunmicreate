@@ -175,6 +175,19 @@
     }
   }
 
+  .animate-banner-marquee {
+    animation: bannerMarquee 22s linear infinite;
+  }
+
+  @keyframes bannerMarquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
