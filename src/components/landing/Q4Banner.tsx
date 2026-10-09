@@ -16,7 +16,7 @@ export const Q4Banner = () => {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
-      className="relative overflow-hidden bg-[hsl(var(--gradient-accent))] bg-accent"
+      style={{ backgroundImage: "var(--gradient-accent)" }}
     >
       {/* Sliding shine effect */}
       <div className="pointer-events-none absolute inset-0 animate-banner-shine bg-gradient-to-r from-transparent via-primary-foreground/25 to-transparent" />
