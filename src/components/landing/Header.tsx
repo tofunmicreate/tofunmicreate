@@ -38,7 +38,7 @@ export const Header = () => {
 
           <div className="hidden md:block">
             <Button variant="accent" size="default" asChild>
-              <a href="https://calendly.com/tjexcel07/30min" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
+              <a href="https://calendly.com/tofunmicreative-info/30min" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
             </Button>
           </div>
 
@@ -73,7 +73,7 @@ export const Header = () => {
                   </a>
                 ))}
                 <Button variant="accent" size="default" className="mt-2" asChild>
-                  <a href="https://calendly.com/tjexcel07/30min" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
+                  <a href="https://calendly.com/tofunmicreative-info/30min" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
                 </Button>
               </div>
             </motion.nav>
