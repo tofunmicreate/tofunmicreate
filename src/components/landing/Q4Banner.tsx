@@ -52,13 +52,13 @@ export const Q4Banner = () => {
       {/* Scrolling ticker: the track holds two copies of the message
           and slides left by half its width, looping seamlessly */}
       <div className="flex overflow-hidden py-2.5">
-        <div className="animate-banner-marquee flex items-center gap-12 pr-12">
+        <div className="animate-banner-marquee flex w-max shrink-0 items-center gap-12 pr-12">
           <Message />
           <Message />
         </div>
         <div
           aria-hidden="true"
-          className="animate-banner-marquee flex items-center gap-12 pr-12"
+          className="animate-banner-marquee flex w-max shrink-0 items-center gap-12 pr-12"
         >
           <Message />
           <Message />
